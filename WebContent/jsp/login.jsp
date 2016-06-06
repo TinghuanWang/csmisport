@@ -11,8 +11,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<%=path%>/system/login.do" type="post">
+	<form action="<%=path%>/system/login.do" method="post">
 		<input type="text" name="name"/>
+		<input type="text" name="id" value="123"/>
 		<input type="submit"/>
 	</form>
 </body>
