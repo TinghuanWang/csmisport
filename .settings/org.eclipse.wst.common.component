@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="csmissp">
+    <wb-module deploy-name="csmisport">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="csmissp"/>
-        <property name="java-output-path" value="/csmissp/build/classes"/>
+        <property name="java-output-path" value="/csmisport/build/classes"/>
+        <property name="context-root" value="csmisport"/>
     </wb-module>
 </project-modules>
