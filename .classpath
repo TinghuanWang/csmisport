@@ -160,6 +160,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmlschema-core-2.1.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmlsec-2.0.2.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmltooling-1.4.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.5.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="D:/apache-tomcat-6.0.43/lib/annotations-api.jar"/>
 	<classpathentry kind="lib" path="D:/apache-tomcat-6.0.43/lib/catalina.jar"/>

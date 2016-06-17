@@ -56,15 +56,16 @@
 			</props>
 		</property>
 	</bean>
-	
+
 	<!-- 用于指定持久化实现厂商类 -->
-	<bean id="persistenceProvider" class="org.hibernate.ejb.HibernatePersistence"/>
+	<bean id="persistenceProvider" class="org.hibernate.ejb.HibernatePersistence" />
 	<!-- 用于设置JPA实现厂商的特定属性 -->
-	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-		<property name="database" value="ORACLE"/>
+	<bean id="jpaVendorAdapter"
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="database" value="ORACLE" />
 	</bean>
 	<!-- 用于指定一些高级特性 -->
-	<bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
+	<bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
 
 	<!-- SPRING 事务管理 -->
 	<bean id="transactionManager"
@@ -80,8 +81,18 @@
 		entity-manager-factory-ref="entityManagerFactory"
 		transaction-manager-ref="transactionManager">
 	</jpa:repositories>
-	
+
 	<context:component-scan base-package="com.tiedate.csmis">
-		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
+
+	<!-- 配置spring容器本身提供的线程池任务执行器 -->
+	<bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10" />
+		<property name="keepAliveSeconds" value="3000" />
+		<property name="maxPoolSize" value="2000" />
+		<property name="queueCapacity" value="500" />
+	</bean>
 </beans>

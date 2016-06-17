@@ -12,11 +12,11 @@
 
 <import resource="classpath:META-INF/cxf/cxf.xml"/>
 <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
-
-<bean id="WsClient" class="com.tiedate.csmis.services.WsServer" factory-bean="clientFactory" 
+<!--  创建客户端工厂 -->
+<bean id="WsClient" class="com.tiedate.csmis.client.TestClient" factory-bean="clientFactory" 
 factory-method="create"/>
     <bean id="clientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
-        <property name="serviceClass" value="com.tiedate.csmis.services.WsServer"/>
+        <property name="serviceClass" value="com.tiedate.csmis.server.WsServer"/>
         <property name="address" value="http://localhost:8080/cp/webservice/myWebservice"/>
     </bean>
 </beans>
